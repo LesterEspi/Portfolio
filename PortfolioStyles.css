@@ -1,0 +1,314 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+/* Base styles */
+
+body {
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 1.8rem; /* 18px */
+  font-weight: 400;
+  line-height: 1.4;
+  color: white;
+}
+
+h1,
+h2 {
+  font-family: 'Proxima Nova Alt', sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 4.2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* nav */
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #D77165;
+  z-index: 10;
+}
+
+.nav-list {
+  display: flex;
+  margin-right: 2rem;
+}
+
+@media (max-width: 28.75em) {
+  .nav {
+    justify-content: center;
+  }
+
+  .nav-list {
+    margin: 0 1rem;
+  }
+}
+
+.nav-list a {
+  display: block;
+  font-size: 2.2rem;
+  padding: 2rem;
+}
+
+.nav-list a:hover {
+  background: #DD8F82;
+
+/* Welcome section */
+}
+form {
+  background: rgba(79, 138, 147, 0.8);
+  padding: 40px 10px;
+  border-radius: 8px;
+}
+
+@media (min-width: 480px) {
+  form {
+    padding: 40px;
+  }
+}
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image:
+  url(https://i0.wp.com/nancy-rubin.com/wp-content/uploads/2020/02/pexels-photo-3759098.jpeg?w=1880&ssl=1);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+/* Projects section */
+
+.projects-section {
+  text-align: center;
+  padding: 10rem 2rem;
+  background: #B4B782;
+  height: 100vh;
+}
+
+.projects-section-header {
+  max-width: 640px;
+  margin: 0 auto 6rem auto;
+}
+
+@media (max-width: 28.75em) {
+  .projects-section-header {
+    font-size: 4rem;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  height: 75%;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+@media (max-width: 30.625em) {
+  .projects-section {
+    padding: 6rem 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project {
+  background: #6D8561;
+  box-shadow: 2px 2px 2px rgba(80, 80, 80, 0.5);
+  border-radius: 2px;
+}
+
+.project:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-out
+}
+
+.code {
+  color: #F5C63C;
+  transition: color 0.3s ease-out;
+}
+.project:hover .code {
+  color: white;
+  transition: background 0.3s ease-out;
+}
+
+.project-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+}
+.project:hover .project-title {
+  color: #F5C63C;
+  transition: color 0.3s ease-out;
+}
+
+/* About Section*/
+.about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  padding: 0 2rem;
+  background-image: linear-gradient(
+    rgba(201, 232, 237, 0.5),
+    rgba(87, 150, 163, 0.5)
+    ),
+    url(https://quietly-image-uploads.s3.amazonaws.com/luxuriousmodernofficedesign_1280px_4e94e5e98b984cdfbbf7fa426a6387b6.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.about-section-header > p {
+  font-size: 2rem;
+  max-width: 600px;
+}
+
+
+
+/* Contact section and footer */
+.contact-links {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  max-width: 800px;
+  flex-wrap: wrap;
+  margin-right: 10px;
+}
+
+.contact-details {
+  font-size: 2.4rem;
+  transition: color 0.3s ease-out;
+}
+
+.contact-details:hover {
+  color: #F5C63C;
+}
+
+.btn1 {
+  height: 50px;
+  padding: 5px 5px 5px 5px; 
+  font-size: 1em;
+  font-family: "Proxima Nova", sans-serif;
+  color: white;
+  text-transform: uppercase;
+  border: 3px white solid;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: color 0.3s ease-out;
+  transition: border 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+}
+
+.btn1:hover {
+  background-color: #6D8561;
+  color: #F5C63C;
+  border: 3px #6D8561 solid;
+  border-radius: 5px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
+  background: #6D8561;
+}
+
+footer > p {
+  margin: 2rem;
+}
+
+footer i {
+  vertical-align: middle;
+}
+
+@media (max-width: 28.75em) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 2px;
+}
